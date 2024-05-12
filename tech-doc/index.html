@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting started with HTML</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+            <div id="logo">エズラ</div>
+            <h1>HTML Documentation</h1>
+        </header>
+        <hr>
+        <ol class="nav-sections">
+            <li><a class="nav-link" href="#Getting_started_with_HTML">Getting started with HTML</a></li>
+            <li><a class="nav-link" href="#What_is_HTML?">What is HTML?</a></li>
+            <li><a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a></li>
+            <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+            <li><a class="nav-link" href="#Anatomy_of_an_HTML_document">Anatomy of an HTML document</a></li>
+            <li><a class="nav-link" href="#Entity_references:_Including_special_characters_in_HTML">Entity references: Including special characters in HTML</a></li>
+            <li><a class="nav-link" href="#HTML_comments">HTML comments</a></li>
+            <li><a class="nav-link" href="#Summary">Summary</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ol>
+    </nav>       
+    <main id="main-doc">
+        <section id="Getting_started_with_HTML" class="main-section">
+            <header>Getting started with HTML</header>
+            <p>
+                In this article, we cover the absolute basics of HTML. To get you started, this article defines elements, attributes, and all the other important terms you may have heard. It also explains where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML page is structured, and other important basic language features. Along the way, there will be an opportunity to play with HTML too!
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Prerequisites:</th>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Basic software installed</a>, and basic knowledge of <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Objective:</th>
+                        <td>
+                            To gain basic familiarity with HTML, and practice writing a few HTML elements.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="What_is_HTML?" class="main-section">
+            <header>What is HTML?</header>
+            <p>
+                <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</a> (HyperText Markup Language) is a <em>markup language</em> that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of <a href="https://developer.mozilla.org/en-US/docs/Glossary/Element">elements</a>, which you use to enclose, wrap, or <em>mark up</em> different parts of content to make it appear or act in a certain way. The enclosing <a href="https://developer.mozilla.org/en-US/docs/Glossary/Tag">tags</a> can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:
+            </p>
+            <code>
+                My cat is very grumpy
+            </code>
+            <p>
+                If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph (<span class="html-tag">&lt;p&gt;</span>) element:
+            </p>
+            <code>
+                <span class="html-tag">&lt;p&gt;</span>My cat is very grumpy<span class="html-tag">&lt;/p&gt;</span>
+            </code>
+            <p>
+                <b>Note:</b> Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a <span class="html-tag">&lt;title&gt;</span> tag could be written as <span class="html-tag">&lt;title&gt;</span>, <span class="html-tag">&lt;TITLE&gt;</span>, <span class="html-tag">&lt;Title&gt;</span>, <span class="html-tag">&lt;TiTlE&gt;</span>, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
+            </p>
+        </section>
+        <section id="Anatomy_of_an_HTML_element" class="main-section">
+            <header>Anatomy of an HTML element</header>
+            <p>
+                Let's further explore our paragraph element from the previous section:
+            </p>
+            <img src="./images/html-element.png" alt="An HTML anatomy">
+            <p>The anatomy of our element is:</p>
+            <ul>
+                <li>
+                    <b>The opening tag:</b> This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.
+                </li>
+                <li>
+                    <b>The content:</b> This is the content of the element. In this example, it is the paragraph text.
+                </li>
+                <li>
+                    <b>The closing tag:</b> This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.
+                </li>
+            </ul>          
+            <p>
+                The element is the opening tag, followed by content, followed by the closing tag.
+            </p>
+        </section>
+        <section id="Attributes" class="main-section">
+            <header>Attributes</header>
+            <p>
+                Elements can also have attributes. Attributes look like this:
+            </p>
+            <img src="./images/html-attribute.png" alt="An HTML attribute">
+            <p>
+                An attribute should have:
+            </p>
+            <ul>
+                <li>
+                    A space between it and the element name. (For an element with more than one attribute, the attributes should be separated by spaces too.)
+                </li>
+                <li>The attribute name, followed by an equal sign.</li>
+                <li>An attribute value, wrapped with opening and closing quote marks.</li>
+            </ul>
+        </section>
+        <section id="Anatomy_of_an_HTML_document" class="main-section">
+            <header>Anatomy of an HTML document</header>
+            <p>
+                Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:
+            </p>
+            <code>
+                <pre>
+<span class="html-tag">&lt;!doctype html&gt;</span>
+<span class="html-tag">&lt;html lang="en-US"&gt;</span>
+    <span class="html-tag">&lt;head&gt;</span>
+        <span class="html-tag">&lt;meta charset="utf-8" /&gt;</span>
+        <span class="html-tag">&lt;title&gt;</span>My test page<span class="html-tag">&lt;/title&gt;</span>
+    <span class="html-tag">&lt;/head&gt;</span>
+    <span class="html-tag">&lt;body&gt;</span>
+        <span class="html-tag">&lt;p&gt;</span>This is my page<span class="html-tag">&lt;/p&gt;</span>
+    <span class="html-tag">&lt;/body&gt;</span>
+<span class="html-tag">&lt;/html&gt;</span></pre>               
+            </code>
+            <p>Here we have:</p>
+            <ol class="html-anatomy">
+                <li>
+                    <span class="html-tag">&lt;!DOCTYPE html&gt;</span>: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. More recently, the doctype is a historical artifact that needs to be included for everything else to work right. <span class="html-tag">&lt;!DOCTYPE html&gt;</span> is the shortest string of characters that counts as a valid doctype. That is all you need to know! 
+                </li>
+                <li>
+                    <span class="html-tag">&lt;html&gt;</span><span class="html-tag">&lt;/html&gt;</span>: The <span class="html-tag">&lt;html&gt;</span> element. This element wraps all the content on the page. It is sometimes known as the root element.
+                </li>
+                <li>
+                    <span class="html-tag">&lt;head&gt;</span><span class="html-tag">&lt;/head&gt;</span>: The <span class="html-tag">&lt;head&gt;</span> element. This element acts as a container for everything you want to include on the HTML page, that isn't the content the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You will learn more about this in the next article of the series.
+                </li>
+                <li>
+                    <span class="html-tag">&lt;meta charset="utf-8"&gt;</span>: The <span class="html-tag">&lt;meta&gt;</span> element. This element represents metadata that cannot be represented by other HTML meta-related elements, like <span class="html-tag">&lt;base&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt;</span> or <span class="html-tag">&lt;title&gt;</span>. The charset attribute specifies the character encoding for your document as UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.
+                </li>
+                <li>
+                    <span class="html-tag">&lt;title&gt;</span><span class="html-tag">&lt;/title&gt;</span>: The <span class="html-tag">&lt;title&gt;</span> element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
+                </li>
+                <li>
+                    <span class="html-tag">&lt;body&gt;</span><span class="html-tag">&lt;/body&gt;</span>: The <span class="html-tag">&lt;body&gt;</span> element. This contains all the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
+                </li>
+            </ol>
+        </section>
+        <section id="Entity_references:_Including_special_characters_in_HTML" class="main-section">
+            <header>Entity references: Including special characters in HTML</header>
+            <p>
+                In HTML, the characters <span class="html-entity">&gt</span>, <span class="html-entity">></span>,<span class="html-entity">"</span>,<span class="html-entity">'</span>, and <span class="html-entity">&</span> are special characters. They are parts of the HTML syntax itself. So how do you include one of these special characters in your text? For example, if you want to use an ampersand or less-than sign, and not have it interpreted as code.
+            </p>
+            <p>
+                You do this with character references. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (<span class="html-entity">&</span>), and ends with a semicolon (<span class="html-entity">;</span>).
+            </p>
+            <table class="entity">
+                <thead>
+                    <tr>
+                        <th>Literal character</th>
+                        <th>Character reference equivalent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>                 
+                        <td class="html-entity">
+                            &lt;
+                        </td>
+                        <td class="html-entity">
+                            &amp;lt;
+                        </td>
+                    </tr>
+                    <tr>                 
+                        <td class="html-entity">
+                            &gt;
+                        </td>
+                        <td class="html-entity">
+                            &amp;gt;
+                        </td>
+                    </tr>
+                    <tr>                 
+                        <td class="html-entity">
+                            &quot;
+                        </td>
+                        <td class="html-entity">
+                            &amp;quot;
+                        </td>
+                    </tr>
+                    <tr>                 
+                        <td class="html-entity">
+                            &apos;
+                        </td>
+                        <td class="html-entity">
+                            &amp;apos;
+                        </td>
+                    </tr>
+                    <tr>                 
+                        <td class="html-entity">
+                            &amp;
+                        </td>
+                        <td class="html-entity">
+                            &amp;amp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                The character reference equivalent could be easily remembered because the text it uses can be seen as less than for <span class="html-entity">&lt;</span>, quotation for <span class="html-entity">&quot;</span> and similarly for others. To find more about entity references, see <a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">List of XML and HTML character entity references (Wikipedia)</a>.
+            </p>
+            <p>
+                In the example below, there are two paragraphs:
+            </p>
+            <code>
+                <span class="html-tag">&lt;p&gt;</span>In HTML, you define a paragraph using the <span class="html-tag">&lt;p&gt;</span> element.<span class="html-tag">&lt;/p&gt;</span>
+                <br>
+                <span class="html-tag">&lt;p&gt;</span>In HTML, you define a paragraph using the &amp;lt;p&amp;gt; element.<span class="html-tag">&lt;/p&gt;</span>
+            </code>
+            <p>
+                In the live output below, you can see that the first paragraph has gone wrong. The browser interprets the second instance of <span class="html-tag">&lt;p&gt;</span> as starting a new paragraph. The second paragraph looks fine because it has angle brackets with character references.
+            </p>
+            <code>
+                <p>In HTML, you define a paragraph using the <p> element.</p>
+                <p>In HTML, you define a paragraph using the <span class="html-tag">&lt;p&gt;</span> element.</p>
+            </code>
+            <p>
+                <b>Note:</b> You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding">character encoding is set to UTF-8</a>.
+            </p>
+        </section>
+        <section id="HTML_comments" class="main-section">
+            <header>HTML comments</header>
+            <p>
+                HTML has a mechanism to write comments in the code. Browsers ignore comments, effectively making comments invisible to the user. The purpose of comments is to allow you to include notes in the code to explain your logic or coding. This is very useful if you return to a code base after being away for long enough that you don't completely remember it. Likewise, comments are invaluable as different people are making changes and updates.
+            </p>
+            <p>
+                To write an HTML comment, wrap it in the special markers <span class="html-comment">&lt;!--</span> and <span class="html-comment">--&gt;</span>. For example:
+            </p>
+            <code>
+                <p><span class="html-tag">&lt;p&gt;</span>I'm not inside a comment<span class="html-tag">&lt;/p&gt;</span></p>
+                <p<span class="html-comment">&lt;!-- &lt;p&gt;I am!&lt;/p&gt; --&gt;</span></p>
+            </code>
+            <p>
+                As you can see below, only the first paragraph is displayed in the live output.
+            </p>
+        </section>
+        <section id="Summary" class="main-section">
+            <header>Summary</header>
+            <p>
+                You made it to the end of the article! We hope you enjoyed your tour of the basics of HTML.
+            </p>
+            <p>
+                At this point, you should understand what HTML looks like, and how it works at a basic level. You should also be able to write a few elements and attributes. The subsequent articles of this module go further on some of the topics introduced here, as well as presenting other concepts of the language.
+            </p>
+            <ul>
+                <li>
+                    As you start to learn more about HTML, consider learning the basics of CSS (Cascading Style Sheets). <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a> is the language used to style web pages, such as changing fonts or colors or altering the page layout. HTML and CSS work well together, as you will soon discover.
+                </li>
+            </ul>
+        </section>
+        <section id="Reference" class="main-section">
+            <header>Reference</header>
+            <p>
+                This is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_element">the MDN webdocs for HTML</a>, for educational use in the fulfilllemt of the freeCodeCamp's Technical Documentation project.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

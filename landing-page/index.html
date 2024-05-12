@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iDroid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <img src="./images/msf-logo.svg" alt="" id="header-img">       
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#features-scroll-target" class="nav-link">Features</a></li>
+                <li><a href="#videos-scroll-target" class="nav-link">Videos</a></li>
+                <li><a href="#pricing-scroll-target" class="nav-link">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">           
+            <img src="./images/idroid.png" alt="iDroid image">
+            <div class="intro-wrapper">
+                <p>Not an iPhone, certainly not an Android; it's...</p>
+                <h1>iDroid</h1>  
+            </div>        
+        </section>
+        <div id="features-scroll-target"></div>       
+        <section id="features">
+            <div class="feature">
+                <img src="./images/nuclear-explosion.png" alt="nuclear-explosion" class="feature-image" />
+                <h3>Durable</h3>
+                <p>Built to withstand nuclear blasts!</p>
+            </div>
+            <div class="feature">
+                <img src="./images/privacy.png" alt="privacy" class="feature-image" />
+                <h3>Private</h3>
+                <p>No bloatware, no spyware and no nonsense apps!</p>
+            </div>
+            <div class="feature">
+                <img src="./images/external-chip-education-vol-02-outlines-amoghdesign.png" alt="external-chip-education-vol-02-outlines-amoghdesign" class="feature-image" />
+                <h3>Performance</h3>
+                <p>Faster than NASA's computers, combined!</p>
+            </div>
+        </section>
+        <div id="videos-scroll-target"></div>
+        <section id="videos">
+            <h2>See the iDroid in action!</h2>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/G9p8ZmNeSzE?si=DLUoAN5tAvv_aa3R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <div id="pricing-scroll-target"></div>
+        <section id="pricing">
+            <div class="price">
+                <h3>iDroid Lite</h3> 
+                <ul>
+                    <li>8 GB RAM</li>
+                    <li>64 GB ROM</li>
+                    <li>24/7 support</li>
+                    <li>2 years worth of updates</li>
+                    <li>25% discount to selected apps</li>
+                </ul>
+                <div class="value">69 USD</div>
+                <button class="buy">Buy</button>
+            </div>
+            <div class="price">
+                <h3>iDroid Pro</h3>              
+                <ul>
+                    <li>16 GB RAM</li>
+                    <li>128 GB ROM</li>
+                    <li>24/7 support</li>
+                    <li>3 years worth of updates</li>
+                    <li>50% discount to selected apps</li>
+                </ul>
+                <div class="value">699 USD</div>
+                <button class="buy">Buy</button>
+            </div>
+            <div class="price">
+                <h3>iDroid Pro+</h3>              
+                <ul>
+                    <li>24 GB RAM</li>
+                    <li>512 GB ROM</li>
+                    <li>24/7 support</li>
+                    <li>5 years worth of updates</li>
+                    <li>90% discount to selected apps</li>
+                </ul>
+                <div class="value">6999 USD</div>
+                <button class="buy">Buy</button>
+            </div>
+        </section>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <h2>Want to hear about the latest phones and updates?</h2>
+            <input type="email" name="email" id="email" placeholder="punished-snake@mb.com" required>
+            <input type="submit" value="Sign me up!" id="submit" >
+        </form>
+    </main>
+    <footer>
+        <div id="logo">エズラ</div>
+        <p>Icons by <a href="https://icons8.com">Icons8</a></p>
+        <P>Disclaimer: This site is for educational purposes only, for the fulfillment of freeCodeCamp's Product Landing Page Project. All Metal Gear Solid logos, names, events, places, objects and persons mentioned/used in this website are not mine.</P>
+    </footer>
+</body>
+</html>

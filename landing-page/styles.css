@@ -1,0 +1,406 @@
+:root {
+    --dark-moss-green: #606c38ff;
+    --pakistan-green: #283618ff;
+    --cornsilk: #fefae0ff;
+    --earth-yellow: #dda15eff;
+    --tigers-eye: #bc6c25ff;
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+    color: var(--pakistan-green)
+}
+
+body {
+    position: relative;
+    background-color: var(--cornsilk);
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    width: 100vw;
+    height: fit-content;
+    padding: 3vh 5vw;
+    background: linear-gradient(0deg, var(--dark-moss-green), var(--pakistan-green));
+}
+
+#header-img {
+    flex: 1 1 0;
+    max-width: 100px;
+}
+
+#nav-bar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 1em;
+}
+
+#nav-bar ul li, .price ul li {
+    list-style-type: none;
+    font-size: 1.5em;
+}
+
+.nav-link, .credit a {
+    color: var(--cornsilk);
+    text-decoration: none;
+}
+
+main {
+    width: 100vw;
+    margin: 40vh auto;
+    padding: 0 3vw;
+}
+
+section {
+    margin-bottom: 5vh;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    color: var(--pakistan-green);
+}
+
+#intro img {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 2vw;
+}
+
+.intro-wrapper p {
+    font-size: 2em;
+}
+
+.intro-wrapper h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0.1em;
+}
+
+.feature p {
+    font-size: 1.5em;
+}
+
+input {
+    display: block;
+    margin: auto;
+}
+
+#features-scroll-target, #videos-scroll-target, #pricing-scroll-target {
+    position: relative;
+    top: -35vh; 
+}
+
+#features, #pricing {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vh; 
+    color: var(--pakistan-green);
+    width: 100%;
+}
+
+.feature, .price {
+    flex: 1;
+    width: 100%;
+    padding: 2vh 2vw;
+    border-radius: 3vw;
+    box-shadow: 4px 4px 5px var(--tigers-eye);
+    background: linear-gradient(20deg, var(--earth-yellow), var(--tigers-eye));
+}
+
+.feature-image {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    max-width: 20%;
+}
+
+.value {
+    margin-top: 0.5em;
+    font-size: 2em;
+    font-weight: 800;
+    text-align: center;
+}
+
+#video {
+    display: block;
+    margin: auto;
+    width: 100%;
+    border-radius: 3vw;
+}
+
+.buy, #submit {
+    display: block;
+    margin: 2vh auto 0 auto;
+    width: fit-content;
+    min-width: 35%;
+    font-size: 1.5em;
+    border: none;
+    padding: 0.5em;
+    border-radius: 1em;
+    font-weight: 700;
+}
+
+.buy {
+    color: var(--earth-yellow);
+    background-color: var(--tigers-eye);
+}
+
+#submit {
+    color: var(--cornsilk);
+    background-color: var(--pakistan-green);
+}
+
+.buy:hover {
+    cursor: pointer;
+    background-color: var(--earth-yellow);
+    color: var(--tigers-eye);
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: var(--dark-moss-green);
+    color: var(--pakistan-green);
+}
+
+#form {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+#email {
+    width: fit-content;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.2em 0.4em;
+    border: none;
+}
+
+footer {
+    background: linear-gradient(0deg, var(--dark-moss-green), var(--pakistan-green));;
+    padding: 2em;
+}
+
+#logo {
+    font-family: "RocknRoll One", sans-serif;
+    font-size: 1em;
+    text-align: center;
+    border: 0.1em solid var(--cornsilk);
+    padding: 0.1em;
+    color: var(--cornsilk);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+footer p, footer a {
+    color: var(--cornsilk);
+}
+
+footer p {
+    margin-top: 0.5em;
+}
+
+footer p:last-child {
+    margin-top: 1em;
+    text-align: justify;
+}
+
+
+@media only screen and (min-width:700px) {
+    #header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: fit-content;
+    }
+
+    #header-img {
+        margin: auto 0;
+        max-width: 80px;
+    }
+
+    #nav-bar ul {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    #nav-bar ul li, .price ul li {
+        font-size: 1.3em;
+    }
+
+    main {
+        margin: 20vh auto;
+        padding: 0 5vw;
+    }
+
+    #intro {
+        flex-direction: row;
+        gap: 1vw;
+        align-items: center;
+    }
+
+    #features-scroll-target, #videos-scroll-target, #pricing-scroll-target {
+        position: relative;
+        top: -15vh; 
+    }
+
+    #features, #pricing {
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 4vw; 
+        height: fit-content;
+    }
+    
+    .feature, .price {
+        align-self: stretch;
+        padding: 1vh 1vw;
+        min-width: 0;
+    }
+
+    .price {
+        max-width: 30vw;
+    }
+
+    .feature-image {
+        max-width: 40%;
+    }
+
+    h3 {
+        font-size: 1.7em;
+        margin-bottom: 0.2em;
+    }
+
+    .feature p, .price p {
+        font-size: 1.3em;
+    }
+
+    .buy {
+        min-width: 40%;
+    }
+
+    #submit {
+        min-width: 25%;
+    }
+
+}
+
+@media only screen and (min-width:1000px) {
+    #header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: fit-content;
+    }
+
+    #header-img {
+        margin: auto 0;
+        max-width: 100px;
+    }
+
+    #nav-bar ul {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 3vw;
+    }
+
+    #nav-bar ul li, .price ul li {
+        font-size: 1.5em;
+    }
+
+    main {
+        margin: 30vh auto;
+        padding: 0 5vw;
+    }
+
+    #intro {
+        flex-direction: row;
+        gap: 1vw;
+        align-items: center;
+    }
+
+    #intro img {
+        width: 30%;
+    }
+
+    #features-scroll-target, #videos-scroll-target, #pricing-scroll-target {
+        position: relative;
+        top: -25vh; 
+    }
+
+    #features, #pricing {
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 4vw; 
+        height: fit-content;
+    }
+    
+    .feature, .price {
+        align-self: stretch;
+        padding: 2vh 2vw;
+        min-width: 0;
+    }
+
+    .price {
+        max-width: 30vw;
+    }
+
+    .feature-image {
+        max-width: 40%;
+    }
+
+    h3 {
+        font-size: 2em;
+        margin-bottom: 0.2em;
+    }
+
+    .feature p, .price p {
+        font-size: 1.5em;
+    }
+
+    #video {
+        max-width: 70%;
+        height: 70vh;
+    }
+
+    .buy {
+        min-width: 40%;
+    }
+
+    #submit {
+        min-width: 15%;
+    }
+
+    #logo {
+        font-size: 1.3em;
+    }
+
+}

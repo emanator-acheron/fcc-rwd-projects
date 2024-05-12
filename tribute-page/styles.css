@@ -1,0 +1,101 @@
+:root {
+    --space-cadet: #22223bff;
+    --ultra-violet: #4a4e69ff;
+    --isabelline: #f2e9e4ff;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    color: var(--isabelline);  
+    text-align: center;
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(40deg, var(--ultra-violet), var(--space-cadet));
+}
+
+#main {
+    width: 80%;
+    margin: 2vh auto;
+}
+
+#title {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+#designation {
+    font-size: 1.2em;
+}
+
+#img-div, #miracle-div {
+    max-width: 100%;
+}
+
+#image, #miracle {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 0.5em auto;
+    border-radius: 1em;
+    box-shadow: 3px 3px 5px var(--space-cadet);
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 1em;
+}
+
+#tribute-info p {
+    text-align: justify;
+}
+
+#tribute-link {
+    text-decoration: none;
+}
+
+#tribute-link:hover {
+    color: var(--rose-quartz);
+}
+
+#logo {
+    max-width: fit-content; 
+    margin: 0 auto;
+    padding: 0.1em;
+    font-family: "RocknRoll One", sans-serif;
+    font-size: 1.5em;
+    color: var(--isabelline);
+    border: 0.1em solid var(--isabelline);
+}
+
+@media only screen and (min-width: 1000px) {
+    #main {
+        width: 90%;
+        margin: 10vh auto;
+    }
+
+    #title {
+        font-size: 4em;
+    }
+
+    #designation {
+        font-size: 2.4em;
+    }
+
+    #image, #miracle {
+        max-width: 80%;
+        box-shadow: 10px 10px 15px var(--space-cadet);
+        margin-bottom: 1em;
+    }
+
+    figcaption, #tribute-info p {
+        font-size: 2em;
+    }
+
+    #logo {
+        font-size: 3em;
+    }
+}

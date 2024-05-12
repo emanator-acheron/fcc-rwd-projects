@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+    
+    <title>Awesome Game Survey</title>
+</head>
+<body>
+    <header>
+        <div id="logo">エズラ</div>
+    </header>
+    <h1 id="title">Awesome Game Survey</h1>
+    <p id="description">Let us know what you think of our awesome game!</p>
+    <form id="survey-form" action="" autocomplete="off">
+        <fieldset>
+            <label id="name-label" for="name">Username: <input id="name" type="text" name="name" placeholder="noobmaster69" required></label>
+            <label id="email-label" for="email">Email: <input type="email" name="email" id="email" placeholder="noobmaster69@awesome.com" required></label>
+            <label id="number-label" for="number">Player Level: <input type="number" name="number" id="number" min="1" max="80" placeholder="80" required></label>       
+        
+            <label for="dropdown">Where did you buy our awesome game?</label>
+            <select name="dropdown" id="dropdown" required>
+                <option value="">--Please select one--</option>
+                <option value="steam">Steam</option>
+                <option value="gog">GOG</option>
+                <option value="epic">Epic</option>
+                <option value="pirate-scum">I donned the pirate hat and set sail on the seven seas!</option>
+            </select>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Did you enjoy our awesome game?</legend>
+            <label for="perfect"><input type="radio" name="rating" id="perfect" value="perfect" checked>Yes, so when's the next one?</label>
+            <label for="yes"><input type="radio" name="rating" id="yes" value="yes">Yes</label>
+            <label for="unsure"><input type="radio" name="rating" id="unsure" value="unsure">Unsure</label>
+            <label for="no"><input type="radio" name="rating" id="no" value="no">No</label>
+            <label for="bad"><input type="radio" name="rating" id="bad" value="bad">No, please give back my money.</label>
+        </fieldset>
+        <fieldset>
+            <legend>What did you enjoy the most about our awesome game? (Check all that apply)</legend>
+            <label for="devs"><input type="checkbox" name="elements" id="devs" value="devs">The hard-working devs</label>
+            <label for="character"><input type="checkbox" name="elements" id="character" value="character">Character Customization</label>
+            <label for="story"><input type="checkbox" name="elements" id="story" value="story">Story</label>
+            <label for="gameplay"><input type="checkbox" name="elements" id="gameplay" value="gameplay">Gameplay</label>
+            <label for="combat"><input type="checkbox" name="elements" id="combat" value="combat">Combat</label>
+            <label for="seriously"><input type="checkbox" name="elements" id="seriously" value="seriously">Clicking the 'quit' button</label>
+        </fieldset>
+        <fieldset>
+            <label for="comments">
+                Additional feedback/comments/suggestions/praises/violent reactions/ragequits for our awesome game?
+                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="The game is awesome and the devs deserved to be paid more..."></textarea>
+            </label>
+        </fieldset>
+        <input id="submit" type="submit" value="Submit">
+    </form>         
+</body>
+</html>
