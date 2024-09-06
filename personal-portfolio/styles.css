@@ -21,7 +21,7 @@ body {
     background: linear-gradient(30deg, var(--background-color), var(--background-color2));
 }
 
-header {
+#navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -39,27 +39,27 @@ header {
     margin: 2vh auto;
 }
 
-#navbar {
+#navbar-list {
     width: 100%;
     height: fit-content;
     margin-top: 4vh;
 }
 
-#navbar ul {
+#navbar-list ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0;
-    gap: 2em;
+    gap: 1em;
     font-size: 1.3em;
 }
 
-#navbar li {
+#navbar-list li {
     list-style-type: none;
 }
 
-#navbar a {
+#navbar-list a {
     text-decoration: none;
 }
 
@@ -210,7 +210,7 @@ footer {
 }
 
 @media only screen and (min-width: 800px) {
-    header {
+    #navbar {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
@@ -223,11 +223,11 @@ footer {
         height: auto;
     }
 
-    #navbar {
+    #navbar-list {  
         margin-top: 0;
     }
 
-    #navbar ul {
+    #navbar-list ul {
         flex-direction: row;
         align-items: end;
         justify-content: flex-end;
@@ -295,7 +295,7 @@ footer {
 }
 
 @media only screen and (min-width: 1000px) {
-    header {
+    #navbar {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
@@ -308,11 +308,11 @@ footer {
         font-size: 2em; 
     }
 
-    #navbar {
+    #navbar-list {
         margin-top: 0;
     }
 
-    #navbar ul {
+    #navbar-list ul {
         flex-direction: row;
         align-items: end;
         justify-content: flex-end;
